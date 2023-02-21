@@ -1,0 +1,23 @@
+<div class="container">
+    <table  class="table table-striped table-hover" width="450" border="1">
+    <caption>TABLA DE ALUMNOS</caption>
+      <thead style="background-color: brown;color:blanchedalmond">
+        <th>N&deg;</th>
+        <th>NOMBRE Y APELLIDOS</th>
+        <th style="text-align: center">FECHA NACIMIENTO</th>
+        <th>CURSO</th>
+        <th style="text-align: center">NOTA MEDIA</th>
+        <th style="text-align: center">VER</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alum of alumnos; let i=index">
+          <td style="text-align: left"><span [ngStyle]="{color: notaColor(alum.notaMedia)}">{{i}}</span></td>
+          <td style="text-align: left"><span [ngStyle]="{color: notaColor(alum.notaMedia)}">{{alum.nombre}} {{alum.apellidos}}</span></td>
+          <td style="text-align: center"><span [ngStyle]="{color: notaColor(alum.notaMedia)}">{{alum.fn | date:"dd/MM/yyyy"}}</span></td> <!-- uso del pipe 'date' de transformacion de fechas a formato español-->
+          <td style="text-align: left"><span [ngStyle]="{color: notaColor(alum.notaMedia)}">{{alum.curso}}</span></td>
+          <td style="text-align: center; padding-right: 15px;"><span [ngStyle]="{color: notaColor(alum.notaMedia)}">{{alum.notaMedia}}</span></td>
+          <td style="text-align: center; padding-right: 15px;"><input type="button"  (click)="VerDat(i)"></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>

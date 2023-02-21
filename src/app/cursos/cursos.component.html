@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="col" style="text-align:center"><h2>{{titulo}}</h2></div>
+  <br><br>
+  <form class="form-group row">
+  
+    <div class="from-group col-md-3">
+      <label for="id">ID:</label>
+      <input type="text" name="id" id="id" placeholder="Identificador" class="form-control" [(ngModel)]="id" />
+    </div>
+    <div class="from-group col-md-3">
+      <label for="curso">Curso:</label>
+      <input type="text" name="curso" id="curso" placeholder="curso" class="form-control" [(ngModel)]="nameCurso" />
+    </div>
+    <div class="from-group col-md-3">
+      <label for="fi">Fecha Inicio:</label>
+      <input type="date" name="fi" id="fi"  class="form-control" [(ngModel)]="fi"/>
+    </div>
+    
+  
+    <div class="from-group col-md-3">
+      <label for="ff">Fecha Nacimiento:</label>
+      <input type="date" name="ff" id="ff"  class="form-control" [(ngModel)]="ff"/>
+    </div>
+  
+    <div class="from-group col-md-3">
+      <label for="horas">Horas:</label>
+      <input type="text" name="horas" id="horas" placeholder="Nº de Horas" class="form-control" [(ngModel)]="horas"/>
+    </div>
+  
+    <div class="from-group col-md-3">
+      <label for="horario">Horario:</label>
+      <input type="text" name="horario" id="horario" placeholder="horario" class="form-control" [(ngModel)]="horario"/>
+    </div>
+  
+    <div class="col">
+      <button type="submit" class="btn btn-primary" (click)="GuardarCurso()" style="margin-top: 35px;">Guardar Curso</button>
+       &nbsp;&nbsp;
+      <button type="reset" class="btn btn-primary"  style="margin-top: 35px;">Limpiar Formulario</button>
+      
+    </div>
+  
+  
+  </form>
+  
+  </div>
+  <!-- **********************************************************************************  -->
+  <hr>
+  <!-- ***********************************************************************************************  -->
+  
+<app-datocursos [arrayCursos]="cursos"   (id_curso)="editCurso($event)"></app-datocursos>

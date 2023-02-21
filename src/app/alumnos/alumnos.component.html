@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="col" style="text-align:center"><h2>{{titulo}}</h2></div>
+    <br><br>
+    <form class="form-group row">
+    
+      <div class="from-group col-md-3">
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id" placeholder="Identificador" class="form-control" [(ngModel)]="id" />
+      </div>
+      <div class="from-group col-md-3">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" [(ngModel)]="nombre" />
+      </div>
+    
+      <div class="from-group col-md-3">
+        <label for="apellido">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" class="form-control" [(ngModel)]="apellidos"/>
+      </div>
+    
+      <div class="from-group col-md-3">
+        <label for="fn">Fecha Nacimiento:</label>
+        <input type="date" name="fn" id="fn" placeholder="" class="form-control" [(ngModel)]="fn"/>
+      </div>
+    
+      <div class="from-group col-md-3">
+        <label for="Curso">Curso:</label>
+        <input type="text" name="curso" id="curso" placeholder="Curso" class="form-control" [(ngModel)]="curso"/>
+      </div>
+    
+      <div class="from-group col-md-3">
+        <label for="cargo">Nota Media:</label>
+        <input type="text" name="nota" id="nota" placeholder="Nota media" class="form-control" [(ngModel)]="notaMedia"/>
+      </div>
+    
+      <div class="col">
+        <button type="submit" class="btn btn-primary" (click)="GuardarAlumno()" style="margin-top: 35px;">Guardar Alumno</button>
+         &nbsp;&nbsp;
+        <button type="reset" class="btn btn-primary"  style="margin-top: 35px;">Limpiar Formulario</button>
+        
+      </div>
+    
+    
+    </form>
+    
+    </div>
+    <!-- **********************************************************************************  -->
+    <hr>
+    <!-- ***********************************************************************************************  -->
+    <app-hijo [arrayAlum]="alumnos"  (id_estudiante)="editAlumno($event)"  ></app-hijo>

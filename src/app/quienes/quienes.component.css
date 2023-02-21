@@ -1,0 +1,27 @@
+section{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 75%;
+}
+
+.titulo{
+    text-align: center;
+}
+
+#divisor {
+    border-top-width: 3px;
+    border-top-color: brown;
+    width: 40px;
+}
+
+.texto{
+    width: 75%;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.historia{
+    display: block;
+}

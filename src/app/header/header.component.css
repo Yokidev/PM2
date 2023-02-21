@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+    color:rgb(245, 240, 240);
+    font-weight: bold;
+    background-color: brown;
+    margin-top:5px;
+}
+
+#logo{
+    position:relative;
+    top:-55px !important;
+    width: 8%;
+}
+
+#encabezado{border:0px solid red;} 

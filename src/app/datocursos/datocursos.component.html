@@ -1,0 +1,26 @@
+<div class="container">
+    <table  class="table table-striped table-hover" width="450" border="1">
+    <caption>TABLA DE CURSOS</caption>
+      <thead style="background-color: brown;color:blanchedalmond">
+        <th>N&deg;</th>
+        <th>CURSO</th>
+        <th style="text-align: center">FECHA INICIO</th>
+        <th style="text-align: center">FECHA FIN</th>
+        <th>NºHORAS</th>
+        <th style="text-align: center">HORARIO</th>
+        <th style="text-align: center">VER</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cur of cursos; let i=index">
+          <td style="text-align: left"><span [ngStyle]="{color: horasColor(cur.horas)}">{{i}}</span></td>
+          <td style="text-align: left"><span [ngStyle]="{color: horasColor(cur.horas)}">{{cur.curso}}</span></td>
+          <td style="text-align: left"><span [ngStyle]="{color: horasColor(cur.horas)}">{{cur.fini | date:"dd/MM/yyyy"}}</span></td>
+          <td style="text-align: center"><span [ngStyle]="{color: horasColor(cur.horas)}">{{cur.ffin| date:"dd/MM/yyyy"}}</span></td> <!-- uso del pipe 'date' de transformacion de fechas a formato español-->
+          <td style="text-align: left"><span [ngStyle]="{color: horasColor(cur.horas)}">{{cur.horas}}</span></td>
+          <td style="text-align: center; padding-right: 15px;"><span [ngStyle]="{color: horasColor(cur.horas)}">{{cur.horario}}</span></td>
+          <td style="text-align: center; padding-right: 15px;"><input type="button"  (click)="VerCurso(i)"></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
